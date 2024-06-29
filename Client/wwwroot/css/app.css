@@ -101,3 +101,16 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+.name-section{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+}
+
+    .name-section h2 {
+        writing-mode: vertical-lr;
+        letter-spacing:1rem;
+        text-transform:uppercase;
+    }

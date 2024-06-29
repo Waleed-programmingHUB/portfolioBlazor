@@ -5,25 +5,25 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar>
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        WALEED ALI SARWAR
+    <MudAppBar Color="Color.Success">
+        <MudImage Src="logo.png" Width="80" Style="padding:1em"/>
+        <MudSpacer/>
+        <MudButton Variant="Variant.Outlined">Resume</MudButton>
     </MudAppBar>
-    <MudDrawer @bind-Open="@_drawerOpen">
-        <NavMenu/>
+    <MudDrawer  Variant="@DrawerVariant.Mini">
+        <div class="name-section">
+            <h2>
+                Waleed ali sarwar
+            </h2>
+        </div>
     </MudDrawer>
+    
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large">
+        <MudContainer>
             @Body
         </MudContainer>
     </MudMainContent>
 </MudLayout>
 
-@code {
-    bool _drawerOpen = true;
-
-    void DrawerToggle()
-    {
-        _drawerOpen = !_drawerOpen;
-    }
+@code{
 }
